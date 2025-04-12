@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AttendEase - Attendance Management System</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="canvas-container"></div>
+
+  <nav class="navbar">
+    <div class="logo">
+      <div class="logo-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v1"></path>
+          <path d="M12 21v-1"></path>
+          <path d="M4.93 4.93l.7.7"></path>
+          <path d="M18.37 18.37l-.7-.7"></path>
+          <path d="M2 12h1"></path>
+          <path d="M21 12h-1"></path>
+          <path d="M4.93 19.07l.7-.7"></path>
+          <path d="M18.37 5.63l-.7.7"></path>
+          <circle cx="12" cy="12" r="4"></circle>
+        </svg>
+      </div>
+      Attend<span>Ease</span>
+    </div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Attendance Management Made Simple</h1>
+    <p>AttendEase streamlines attendance tracking for educational institutions with real-time monitoring, detailed
+      analytics, and an intuitive user interface.</p>
+
+    <div class="user-options">
+      <div class="option-card">
+        <div class="option-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <h2>Student</h2>
+        <p>Track your attendance, view classes and receive absence notifications.</p>
+        <button id="student-btn" class="option-btn">Join as Student</button>
+
+      </div>
+
+      <div class="option-card">
+        <div class="option-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <h2>Faculty</h2>
+        <p>Manage class attendance, generate reports and analyze student data.</p>
+        <button class="option-btn" id="join-faculty-btn">Join as Faculty</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features-section">
+    <div class="section-container">
+      <h2 class="section-title">🔥 Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📸</div>
+          <h3>Face ID Attendance</h3>
+          <p>Fast and secure face recognition using Raspberry Pi</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Student Dashboard</h3>
+          <p>View subject-wise attendance anytime</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👨‍🏫</div>
+          <h3>Teacher Dashboard</h3>
+          <p>Manage attendance, view class records, and verify issues</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚠️</div>
+          <h3>Issue Reporting</h3>
+          <p>Raise manual requests if Face ID fails</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔐</div>
+          <h3>Login System</h3>
+          <p>Secure access for both students and teachers</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>Smart Date Labels</h3>
+          <p>Auto-generated dates for each class session</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">☁️</div>
+          <h3>Real-Time Sync</h3>
+          <p>Instantly updates data across dashboards</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="section-container">
+      <h2 class="section-title">About</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>This is a smart attendance system designed for modern classrooms. It uses <strong>Face ID recognition with
+              Raspberry Pi</strong> to make marking attendance fast, secure, and contactless.</p>
+          <p>Students and teachers each get their own dashboards:</p>
+          <ul>
+            <li><strong>Students</strong> can view their subject-wise attendance anytime.</li>
+            <li><strong>Teachers</strong> can manage class records, verify issues, and track attendance effortlessly.
+            </li>
+          </ul>
+          <p>If Face ID ever fails, students can report an issue directly through the system for manual approval. It's
+            simple, reliable, and built for the future of education.</p>
+        </div>
+        <div class="about-image">
+          <div class="image-3d">
+            <div class="cube">
+              <div class="cube-face front">AI</div>
+              <div class="cube-face back">Pi</div>
+              <div class="cube-face right">Face</div>
+              <div class="cube-face left">ID</div>
+              <div class="cube-face top">Attend</div>
+              <div class="cube-face bottom">Ease</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="section-container">
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-intro">Have questions or want to connect with the team? Reach out to us!</p>
+      <div class="team-members">
+        <div class="team-card">
+          <h3>👨‍💻 MD Asif Ali</h3>
+          <p>📞 6207601698</p>
+          <p>📧 asif.ethical@gmail.com</p>
+        </div>
+        <div class="team-card">
+          <h3>👨‍💻 Mohammad Oweis</h3>
+          <p>📞 6362460300</p>
+          <p>📧 owaizsajida@gamil.com</p>
+        </div>
+        <div class="team-card">
+          <h3>👨‍💻 Varun B</h3>
+          <p>📞 9964913915</p>
+          <p>📧 varunb57@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

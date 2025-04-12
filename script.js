@@ -100,7 +100,7 @@
  });
 
  document.getElementById('join-faculty-btn').addEventListener('click', function () {
-   window.location.href = 'Attendance_taker_and_data.html';
+   window.location.href = 'attendance.html';
  });
  
 
